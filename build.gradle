@@ -1,0 +1,16 @@
+group 'january89'
+version '0.1-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile ('io.netty:netty-all:5.0.0.Alpha2')
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}

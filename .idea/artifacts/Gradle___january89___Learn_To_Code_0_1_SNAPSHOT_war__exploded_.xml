@@ -11,9 +11,6 @@
           <element id="module-output" name="Learn_To_Code_main" />
           <element id="dir-copy" path="$PROJECT_DIR$/build/resources/main" />
         </element>
-        <element id="directory" name="lib">
-          <element id="library" level="project" name="Gradle: io.netty:netty-all:5.0.0.Alpha2" />
-        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/Learn_To_Code/exploded/Learn_To_Code-0.1-SNAPSHOT.war/META-INF/MANIFEST.MF" />

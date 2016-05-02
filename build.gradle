@@ -2,37 +2,16 @@ group 'january89'
 version '0.1-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'idea'
 apply plugin: 'war'
 
-ext{
-
-    versions = [
-
-    jdk : '1.8',
-    spring : '4.2.5.RELEASE',
-    netty : '5.0.0.Alpha2'
-
-    ]
-
-}
+apply from :'./gradle/lib.gradle'
 
 //자바 버젼
 sourceCompatibility = versions.jdk
 targetCompatibility = versions.jdk
 
+//UTF-8
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
 repositories { mavenCentral() }
-
-dependencies {
-
-    compile("org.springframework:spring-webmvc:${versions.spring}")
-    compile("org.springframework:spring-context:${versions.spring}")
-    compile("org.springframework:spring-context-support:${versions.spring}")
-    compile ("io.netty:netty-all:${versions.netty}")
-
-    testCompile group: 'junit', name: 'junit', version: '4.11'
-
-    // jspPage
-    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
-    runtime "javax.servlet:jstl:1.2"
-
-}

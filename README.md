@@ -1,3 +1,1 @@
-# Learn_To_Code
-
-아아.. 감동이다 이제 정말.. 제대로 푸시가 된 것 같습니다!
+"# Go_To_Repository" 

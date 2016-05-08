@@ -6,9 +6,6 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 
 import java.nio.charset.Charset;
 
-/**
- * Created by Park Tae Hwan on 2016-04-29.
- */
 public class EchoServerHandler extends ChannelInboundHandlerAdapter{
 
     @Override

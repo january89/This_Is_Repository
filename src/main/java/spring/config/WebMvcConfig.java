@@ -18,7 +18,7 @@ import java.util.List;
 
 @Configuration
 @ComponentScan(basePackages = {
-        "com.example.controller",
+        "spring.controller"
 })
 @EnableWebMvc
 public class WebMvcConfig  extends WebMvcConfigurerAdapter {

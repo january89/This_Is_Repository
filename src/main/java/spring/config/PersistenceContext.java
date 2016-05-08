@@ -22,7 +22,7 @@ import java.util.Properties;
 public class PersistenceContext {
 
     private static final String[] PROPERTY_PACKAGES_TO_SCAN = {
-            "com.example.domain"
+            "spring.implement"
     };
 
     protected static final String PROPERTY_NAME_DATABASE_DRIVER = "db.driver";

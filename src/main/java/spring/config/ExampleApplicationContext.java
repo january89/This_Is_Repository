@@ -7,7 +7,7 @@ import org.springframework.context.support.ResourceBundleMessageSource;
 
 @Configuration
 @ComponentScan(basePackages = {
-        "com.example.service"
+        "spring.service"
 })
 @Import({WebMvcConfig.class, PersistenceContext.class})
 @PropertySource("classpath:application.properties")

@@ -21,6 +21,8 @@
     <bytecodeTargetLevel>
       <module name="Learn_To_Code_main" target="1.8" />
       <module name="Learn_To_Code_test" target="1.8" />
+      <module name="This_Is_Repository_main" target="1.8" />
+      <module name="This_Is_Repository_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

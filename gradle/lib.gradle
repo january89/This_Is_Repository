@@ -14,7 +14,8 @@ ext{
             junit:'4.12',
             lombok:'1.16.8',
             jackson: '2.7.4',
-            bootstrap:'4.0.0-alpha.2'
+            bootstrap:'4.0.0-alpha.2',
+            mysql:'6.0.2'
 
     ]
 
@@ -47,9 +48,10 @@ dependencies {
 
     // db
     compile("com.zaxxer:HikariCP:${versions.hikariCP}")
+    compile("mysql:mysql-connector-java:${versions.mysql}")
 
-    compile "com.fasterxml.jackson.core:jackson-annotations:${versions.jackson}"
-    compile "com.fasterxml.jackson.core:jackson-core:${versions.jackson}"
-    compile "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}"
+    compile("com.fasterxml.jackson.core:jackson-annotations:${versions.jackson}")
+    compile("com.fasterxml.jackson.core:jackson-core:${versions.jackson}")
+    compile("com.fasterxml.jackson.core:jackson-databind:${versions.jackson}")
 
 }

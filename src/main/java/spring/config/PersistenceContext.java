@@ -25,7 +25,7 @@ public class PersistenceContext {
             "spring.implement"
     };
 
-    protected static final String PROPERTY_NAME_DATABASE_DRIVER = "db.driver";
+    protected static final String PROPERTY_NAME_DATABASE_DRIVER = "com.mysql.jdbc.Driver";
     protected static final String PROPERTY_NAME_DATABASE_PASSWORD = "db.password";
     protected static final String PROPERTY_NAME_DATABASE_URL = "db.url";
     protected static final String PROPERTY_NAME_DATABASE_USERNAME = "db.username";

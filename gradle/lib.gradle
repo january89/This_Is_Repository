@@ -9,17 +9,21 @@ ext{
             hibernateValidator:'5.2.4.Final',
             springdatajpa:'1.9.4.RELEASE',
             springsecurity:'4.0.4.RELEASE',
-            hikariCP: '2.4.4',
+            hikariCP: '2.4.5',
             sitemesh:'3.0.1',
             junit:'4.12',
             lombok:'1.16.8',
-            jackson: '2.7.3'
+            jackson: '2.7.4',
+            bootstrap:'4.0.0-alpha.2'
 
     ]
 
 }
 
 dependencies {
+
+    // front
+    compile("org.webjars:bootstrap:${versions.bootstrap}")
 
     // netty
     compile("io.netty:netty-all:${versions.netty}")
@@ -29,7 +33,6 @@ dependencies {
     compile("org.springframework:spring-context:${versions.spring}")
     compile("org.springframework:spring-context-support:${versions.spring}")
     compile("org.sitemesh:sitemesh:${versions.sitemesh}")
-
 
     // persistence
     compile("org.springframework.data:spring-data-jpa:${versions.springdatajpa}")

@@ -9,10 +9,7 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
-/**
- * Created by Park Tae Hwan on 2016-04-29.
- */
-public class EchoClient {
+public final class EchoClient {
     public static void main(String[] args) {
 
         EventLoopGroup group = new NioEventLoopGroup();
@@ -30,13 +27,10 @@ public class EchoClient {
                         }
                     });
 
-            ChannelFuture f = b.connect("localhost", 8888).sync();
+        }
 
-        } catch (InterruptedException e) {
-
-            e.printStackTrace();
+        finally {
             group.shutdownGracefully();
-
         }
 
     }

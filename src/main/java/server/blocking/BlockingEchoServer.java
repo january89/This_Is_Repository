@@ -7,7 +7,7 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.oio.OioEventLoopGroup;
 import io.netty.channel.sctp.oio.OioSctpServerChannel;
 import io.netty.channel.socket.SocketChannel;
-import server.echo.EchoServerHandler;
+import server.handler.EchoServerHandler;
 
 public class BlockingEchoServer{
 

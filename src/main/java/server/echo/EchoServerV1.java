@@ -2,32 +2,26 @@ package server.echo;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelInitializer;
-import io.netty.channel.ChannelOption;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.sctp.nio.NioSctpServerChannel;
 import io.netty.channel.socket.SocketChannel;
-import io.netty.handler.logging.LogLevel;
-import io.netty.handler.logging.LoggingHandler;
-import server.handler.EchoServerHandler;
+import io.netty.channel.socket.nio.NioServerSocketChannel;
+import server.handler.EchoServerV1Handler;
 
-public final class EchoServerWithOption{
+public class EchoServerV1{
     public static void main(String[] args) throws Exception{
         EventLoopGroup bossGroup = new NioEventLoopGroup(1);
         EventLoopGroup workerGroup = new NioEventLoopGroup();
-
         try{
             ServerBootstrap b = new ServerBootstrap();
             b.group(bossGroup,workerGroup)
-                    .channel(NioSctpServerChannel.class)
-                    .option(ChannelOption.SO_BACKLOG,1)
-                    .handler(new LoggingHandler(LogLevel.INFO))
-                    .childHandler(new ChannelInitializer<SocketChannel>() {
+                    .channel(NioServerSocketChannel.class)
+                    .childHandler(new ChannelInitializer<SocketChannel>(){
                         @Override
-                        public void initChannel(SocketChannel ch){
+                        public void initChannel(SocketChannel ch) {
                             ChannelPipeline p = ch.pipeline();
-                            p.addLast(new EchoServerHandler());
+                            p.addLast(new EchoServerV1Handler());
                         }
                     });
         }
@@ -35,5 +29,6 @@ public final class EchoServerWithOption{
             workerGroup.shutdownGracefully();
             bossGroup.shutdownGracefully();
         }
+
     }
 }

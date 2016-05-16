@@ -15,7 +15,8 @@ ext{
             lombok:'1.16.8',
             jackson: '2.7.4',
             bootstrap:'4.0.0-alpha.2',
-            mysql:'6.0.2'
+            mysql:'6.0.2',
+            tomcat:'9.0.0.M4'
 
     ]
 
@@ -53,5 +54,8 @@ dependencies {
     compile("com.fasterxml.jackson.core:jackson-annotations:${versions.jackson}")
     compile("com.fasterxml.jackson.core:jackson-core:${versions.jackson}")
     compile("com.fasterxml.jackson.core:jackson-databind:${versions.jackson}")
+
+    // tomcat
+    compile("org.apache.tomcat:tomcat-catalina:${versions.tomcat}");
 
 }

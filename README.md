@@ -39,3 +39,13 @@ EchoServerV1Handler 추가
 EchoServerV2Handler 추가
 
 채널 파이프라인 - 이벤트 핸들러를 나누는 구역!
+
+# 5월 21일
+
+Netty 181p 까지 완료! (Part2 완료)
+
+HelloWorld 예제까지만 추가 
+
+이후에는 소스 삭제 및 네티서버 구축
+
+바이트버퍼 다시 복습할 것!

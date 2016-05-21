@@ -10,6 +10,8 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 import server.handler.EchoServerHandler;
+import server.handler.EchoServerV3FistHandler;
+import server.handler.EchoServerV3SecondHandler;
 
 /**
  * Created by Park Tae Hwan on 2016-05-11.
@@ -26,8 +28,8 @@ public class EchoServerV3{
                         @Override
                         public void initChannel(SocketChannel ch){
                             ChannelPipeline p = ch.pipeline();
-                            p.addLast(new LoggingHandler(LogLevel.DEBUG));
-                            p.addLast(new EchoServerHandler());
+                            p.addLast(new EchoServerV3FistHandler());
+                            p.addLast(new EchoServerV3SecondHandler());
                         }
                     });
         }

@@ -55,7 +55,4 @@ dependencies {
     compile("com.fasterxml.jackson.core:jackson-core:${versions.jackson}")
     compile("com.fasterxml.jackson.core:jackson-databind:${versions.jackson}")
 
-    // tomcat
-    compile("org.apache.tomcat:tomcat-catalina:${versions.tomcat}");
-
 }

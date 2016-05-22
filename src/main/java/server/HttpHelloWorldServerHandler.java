@@ -12,7 +12,7 @@ import static io.netty.handler.codec.http.HttpResponseStatus.OK;
 import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
 
 public class HttpHelloWorldServerHandler extends ChannelHandlerAdapter {
-    private static final byte[] CONTENT = {'H','e','l','l','o',' ','W','o','r','l','d'};
+    private static final byte[] CONTENT = {'H','e','l','l','o',' ','W','o','r','l','d','a'};
 
     private static final AsciiString CONTENT_TYPE = new AsciiString("Content-Type");
     private static final AsciiString CONTENT_LENGTH = new AsciiString("Content-Length");

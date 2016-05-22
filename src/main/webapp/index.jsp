@@ -11,7 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
-  Helloworld
 
   </body>
 </html>

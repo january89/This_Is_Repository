@@ -7,9 +7,6 @@ import java.util.Date;
 
 import static io.netty.channel.ChannelHandler.*;
 
-/**
- * Created by eight on 2016-05-22.
- */
 @Sharable
 public class TelnetServerHandler extends SimpleChannelInboundHandler<String>{
 
@@ -21,7 +18,7 @@ public class TelnetServerHandler extends SimpleChannelInboundHandler<String>{
     }
 
     @Override
-    public void channelRead0(ChannelHandlerContext ctx, String request) throws Exception{
+    public void messageReceived(ChannelHandlerContext ctx, String request) throws Exception{
         String response;
         boolean close = false;
 

@@ -1,0 +1,17 @@
+group 'january89'
+version '0.1-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'war'
+
+apply from :'./gradle/lib.gradle'
+
+//자바 버젼
+sourceCompatibility = versions.jdk
+targetCompatibility = versions.jdk
+
+//UTF-8
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+repositories { mavenCentral() }
